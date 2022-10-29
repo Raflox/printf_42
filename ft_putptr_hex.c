@@ -10,20 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_putptr_hex(unsigned long n, int base)
+int	ft_putptr_hex(unsigned long n, int base)
 {
 	unsigned long	nbr;
+	int				x;
 
 	nbr = n;
-	if (nbr > base - 1)
+	x = 0;
+	x += ft_putstr("0x");
+	if (nbr > (unsigned long)(base - 1))
 	{
-		ft_putptr_hex(nbr / base, base);
-		ft_putptr_hex(nbr % base, base);
+		x += ft_putptr_hex(nbr / base, base);
+		x += ft_putptr_hex(nbr % base, base);
 	}
 	else if (nbr < 10)
-		ft_putchar(nbr += 48);
+	{
+		nbr += 48;
+		x += ft_putchar(nbr);
+	}
 	else
-		ft_putchar(nbr += 87);
+	{
+		nbr += 87;
+		x += ft_putchar(nbr);
+	}
+	return (x);
 }

@@ -6,14 +6,15 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:58:01 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/26 19:11:23 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:17:34 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-	if (s)
-		write(1, s, ft_strlen(s));
+	if (!s)
+		return (0);
+	return (write(1, s, ft_strlen(s)));
 }

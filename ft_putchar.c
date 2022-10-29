@@ -6,13 +6,13 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:55:03 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/26 19:11:18 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:17:23 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }

@@ -6,11 +6,11 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:24:53 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/27 11:25:15 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:17:36 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {
