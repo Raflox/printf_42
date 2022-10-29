@@ -6,7 +6,7 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:59:36 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/28 17:17:29 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:35:27 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_putnbr_base(long n, int b)
 	}
 	else
 	{
-		nbr += 48;
+		nbr += 55;
 		x += ft_putchar(nbr);
 	}
 	return (x);

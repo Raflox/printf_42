@@ -1,10 +1,10 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int main()
 {
 	char str[] = "+++";
-	ft_printf("%: % % %%% |char: %c str: %s d: %d i: %i X: %X x: %x p: %p%%", 65 + 256, str, 0x65, 0x65, 1200, 1200, str);
+	ft_printf("NULL %s NULL", NULL);
 	write(1, "\n", 1);
-	printf("%: % % %%% |char: %c str: %s d: %d i: %i X: %X x: %x p: %p%%", 65 + 256, str, 0x65, 0x65, 1200, 1200, str);
+	printf("NULL %s NULL", NULL);
 
 }

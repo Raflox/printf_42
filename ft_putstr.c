@@ -6,7 +6,7 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:58:01 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/28 17:17:34 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:32:14 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *s)
 {
-	if (!s)
-		return (0);
+	if (!s || s == NULL)
+		return ('\0');
 	return (write(1, s, ft_strlen(s)));
 }
