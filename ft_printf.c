@@ -6,7 +6,7 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:10:45 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/29 14:21:56 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:51:28 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_checkprint(char c, va_list args)
 	else if (c == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	else if (c == 'd' || c == 'i')
-		return (ft_putnbr_base(va_arg(args, int), 10));
+		return (ft_putnbr(va_arg(args, int)));
 	else if (c == 'X')
 		return (ft_putnbr_base(va_arg(args, int), 16));
 	else if (c == 'x')
@@ -27,7 +27,8 @@ static int	ft_checkprint(char c, va_list args)
 	else if (c == 'u')
 		return (ft_putnbr_base(va_arg(args, unsigned int), 10));
 	else if (c == 'p')
-		return (ft_putptr_hex(va_arg(args, unsigned long), 16));
+		return (ft_putptr_hex(va_arg(args, unsigned long), \
+		"0123456789abcdef", 2, 0));
 	else if (c == '%')
 		return (ft_putchar('%'));
 	return (0);

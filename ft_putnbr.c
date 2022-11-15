@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 18:59:36 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/11/08 12:00:30 by rafilipe         ###   ########.fr       */
+/*   Created: 2022/11/02 15:35:26 by rafilipe          #+#    #+#             */
+/*   Updated: 2022/11/02 15:38:32 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(long n, unsigned int b)
+int	ft_putnbr(long n)
 {
-	unsigned int	nbr;
-	int				x;
+	long int	nb;
+	int			x;
 
-	nbr = n;
+	nb = n;
 	x = 0;
-	if (nbr > b - 1)
+	if (nb < 0)
 	{
-		x += ft_putnbr_base(nbr / b, b) + ft_putnbr_base(nbr % b, b);
+		x += ft_putchar('-');
+		nb *= -1;
 	}
-	else if (nbr < 10)
+	if (nb > 9)
 	{
-		nbr += 48;
-		x += ft_putchar(nbr);
+		x += ft_putnbr(nb / 10) + ft_putnbr(nb % 10);
 	}
 	else
 	{
-		nbr += 55;
-		x += ft_putchar(nbr);
+		nb += 48;
+		x += ft_putchar(nb);
 	}
 	return (x);
 }

@@ -6,24 +6,19 @@
 /*   By: rafilipe <rafilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:59:36 by rafilipe          #+#    #+#             */
-/*   Updated: 2022/10/28 17:17:26 by rafilipe         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:09:10 by rafilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbase_low(long n, int b)
+int	ft_putnbase_low(long n, unsigned int b)
 {
-	long int	nb;
-	int			x;
+	unsigned int	nb;
+	int				x;
 
 	nb = n;
 	x = 0;
-	if (nb < 0)
-	{
-		x += ft_putchar('-');
-		nb *= -1;
-	}
 	if (nb > b - 1)
 	{
 		x += ft_putnbase_low(nb / b, b) + ft_putnbase_low(nb % b, b);
